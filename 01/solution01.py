@@ -4,7 +4,7 @@ def load_words():
     """Load dictionary into a list and return list"""
     with open(DICTIONARY) as file:
         dic = file.read()
-        dic = dic.strip('\n').split('\n')
+        dic = dic.strip().split()
     return dic
 
 def calc_word_value(word):
