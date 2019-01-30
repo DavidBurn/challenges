@@ -2,10 +2,13 @@
 # Code Challenge 02 - Word Values Part II - a simple game
 # http://pybit.es/codechallenge02.html
 
-from data import DICTIONARY, LETTER_SCORES, POUCH
+from data import DICTIONARY, LETTER_SCORES, POUCH, _load_words
+import random
 
 NUM_LETTERS = 7
+draw = random.sample(POUCH, k=7)
 
+words = _load_words()
 
 # re-use from challenge 01
 def calc_word_value(word):
